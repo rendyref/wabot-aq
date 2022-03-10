@@ -128,6 +128,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       setting.nyimak = isEnable
       break
     case 'autoread':
+      isAll = true
+      if (!isOwner) return dfail('owner', m, conn)
+      setting.autoread = isEnable
+      break
     case 'anticall':
       isAll = true
       if (!isOwner) return dfail('owner', m, conn)
