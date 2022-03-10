@@ -44,7 +44,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let { exp, limit, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
-    let d = new Date(new Date + 28800000)
+    let d = new Date(new Date + 'GMT+07:00')
     let locale = 'id'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
