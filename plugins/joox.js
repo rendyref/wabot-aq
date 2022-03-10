@@ -21,5 +21,5 @@ handler.help = ['joox'].map(v => v + ' <judul>')
 handler.tags = ['downloader']
 handler.command = /^joox$/i
 handler.limit = true
-handler.premium = true // hapus aja kalau saya sengaja premium makan kuota termux :)
+handler.premium = false // hapus aja kalau saya sengaja premium makan kuota termux :)
 module.exports = handler
