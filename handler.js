@@ -95,7 +95,7 @@ module.exports = {
         if (typeof setting !== 'object') global.db.data.settings[this.user.jid] = {}
         if (setting) {
           if (!('anticall' in setting)) setting.anticall = false
-          if (!('autoread' in setting)) setting.autoread = true
+          if (!('autoread' in setting)) setting.autoread = false
           if (!('nyimak' in setting)) setting.nyimak = false
           if (!('restrict' in setting)) setting.restrict = false
           if (!('self' in setting)) setting.self = false
