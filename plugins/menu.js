@@ -4,13 +4,11 @@ let levelling = require('../lib/levelling')
 let tags = {
   'main': 'Main',
   'game': 'Game',
-  'xp': 'Exp & Limit',
   'sticker': 'Sticker',
   'kerang': 'Kerang Ajaib',
   'quotes': 'Quotes',
   'admin': 'Admin',
   'group': 'Group',
-  'premium': 'Premium',
   'internet': 'Internet',
   'anonymous': 'Anonymous Chat',
   'nulis': 'MagerNulis & Logo',
@@ -20,21 +18,16 @@ let tags = {
   'database': 'Database',
   'vote': 'Voting',
   'absen': 'Absen',
-  'quran': 'Al Qur\'an',
-  'jadibot': 'Jadi Bot',
   'owner': 'Owner',
-  'host': 'Host',
-  'advanced': 'Advanced',
   'info': 'Info',
-  '': 'No Category',
 }
 const defaultMenu = {
   before: `
 ╭─「 %me 」
 │ Hai, %name!
 │
+│ Waktu: *%time*
 │ Tanggal: *%week, %date*
-│ Waktu  : *%time*
 ╰────
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
@@ -70,7 +63,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       year: 'numeric'
     }).format(d)
     let time = d.toLocaleTimeString(locale, {
-      hour: 'numeric',
+      hour: 'numeric'+7,
       minute: 'numeric',
       second: 'numeric'
     })
