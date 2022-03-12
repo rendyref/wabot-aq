@@ -8,7 +8,6 @@ let handler  = async (m, { conn, args, text }) => {
   let { url, width, height } = pickRandom(results) || {}
   if (!url) throw '404 Not Found'
   conn.sendFile(m.chat, url, 'gimage', `
-*Size*: ${width}x${height}
 `.trim(), m)
 }
 handler.help = ['gimage <query>', 'image <query>']
