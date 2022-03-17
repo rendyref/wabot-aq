@@ -1,4 +1,4 @@
-let handler = async (m, { command }) => {
+let handler = async (m, { conn }) => {
   m.reply(`
 {\__/}
 ( • . • )
