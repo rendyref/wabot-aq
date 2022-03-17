@@ -1,8 +1,6 @@
 let handler = async (m, { conn }) => {
   m.reply(`
-{\__/}
-( • . • )
-/ > 🍹Nih banh
+🍹Nih banh
 `.trim())
 }
 handler.help = ['ts']
