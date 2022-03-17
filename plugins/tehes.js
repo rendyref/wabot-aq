@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
   m.reply(`
-🍹Nih banh
+🍹nih banh
 `.trim())
 }
 handler.help = ['ts']
