@@ -7,7 +7,7 @@ module.exports = {
             if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 10) {
                 if (this.spam[m.sender].count > 1) {
                     //global.db.data.users[m.sender].banned = true
-                    m.reply('https://cdn.discordapp.com/attachments/843656817056808981/956477814897528832/STK-20220324-WA0011.webp')
+                    m.sendFile('https://cdn.discordapp.com/attachments/843656817056808981/956477814897528832/STK-20220324-WA0011.webp', 'STK-20220324-WA0011.webp')
                 }
                 this.spam[m.sender].count = 0
                 this.spam[m.sender].lastspam = m.messageTimestamp.toNumber()
